@@ -1,9 +1,13 @@
 #---------------------------------------------------------------------------------------------
 # Comparing result of  flowDensity with manual gating
+# Author: Mehrnoush MAlek
+#Created: April 2014
+#Last modified: August 2014
+#This script is only made to reproduce the Figure 1 in the flowDensity Manuscript
 #---------------------------------------------------------------------------------------------
 library(flowCore)
 library(flowDensity)
-f <- read.FCS("~/Desktop/Fig1-a_Sample.fcs")
+f <- read.FCS("~/Fig1-a_Sample.fcs")
 message("tube: ", f@description$'TUBE NAME')
 
 
@@ -95,7 +99,7 @@ text(x=3, y=3.5, labels="NK cells")
 # Comparing result of SamSPECTRAL, flowMeans, XCYTE with flowDensity 
 #---------------------------------------------------------------------------------------------
 #FCS file downloaded from flowRepository mentioned in the mani manuscript
-frame <- read.FCS("~/Desktop/Fig1-d-TransformedSample.fcs")
+frame <- read.FCS("~/Fig1-d-TransformedSample.fcs")
 
 ##############################################################################################
 #Running flowDensity
